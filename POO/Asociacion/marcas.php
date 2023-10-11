@@ -1,0 +1,57 @@
+<?php
+
+class Marca{
+    private int $id;
+    private string $nombre;
+
+
+    
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nombre
+     */ 
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set the value of nombre
+     *
+     * @return  self
+     */ 
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    public function guardar(){
+        // esto lo vamos a detallar en el taller
+        $query = 'insert into marcas'.$this->nombre;
+        $this->setId(1);// esto es un id
+    }
+}
+
+?>
